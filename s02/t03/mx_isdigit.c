@@ -1,9 +1,9 @@
 #include <stdbool.h>
 #include <stdio.h>
 
-bool mx_is_odd(int value)
+bool mx_isdigit(int c)
 {
-    if (value % 2)
+    if (c >= 48 && c <= 57)
     {
         return true;
     }
@@ -15,6 +15,6 @@ bool mx_is_odd(int value)
 
 int main()
 {
-    printf("%d\n", mx_is_odd(327680002));
+    printf("%d\n", mx_isdigit(65));
     return 0;
 }
