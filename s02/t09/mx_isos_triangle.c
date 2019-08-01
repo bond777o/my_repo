@@ -33,6 +33,6 @@ void print_green_tree(unsigned int sections, unsigned int length, char c)
 
 int main()
 {
-    print_green_tree(3, 6, '^');
+    print_green_tree(20, 7, '*');
     return 0;
 }

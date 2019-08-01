@@ -11,9 +11,3 @@ int mx_toupper(int c)
         return c;
     }
 }
-
-int main()
-{
-    printf("%c\n", mx_toupper('t'));
-    return 0;
-}

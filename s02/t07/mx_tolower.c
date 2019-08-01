@@ -11,9 +11,3 @@ int mx_tolower(int c)
         return c;
     }
 }
-
-int main()
-{
-    printf("%c\n", mx_tolower('O'));
-    return 0;
-}

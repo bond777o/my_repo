@@ -3,13 +3,13 @@
 
 void mx_printint(int n)
 {
-    char a;
+    int a;
 
     while (n != 0)
     {
         a = 0;
         a = n % 10;
-        printf("%d", a);
+        mx_printchar('0' + a);
         n = n / 10;
     }
 }

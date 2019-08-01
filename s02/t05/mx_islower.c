@@ -12,9 +12,3 @@ bool mx_islower(int c)
         return false;
     }
 }
-
-int main()
-{
-    printf("%d\n", mx_islower('d'));
-    return 0;
-}
