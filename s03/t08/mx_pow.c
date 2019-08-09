@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 double mx_pow(double n, unsigned int pow)
 {
     double result = n;
@@ -12,10 +10,4 @@ double mx_pow(double n, unsigned int pow)
         result = result * n;
     }
     return result;
-}
-
-int main()
-{
-    printf("%f\n", mx_pow(2, 0));
-    return 0;
 }
