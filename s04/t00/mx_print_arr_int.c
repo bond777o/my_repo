@@ -1,5 +1,4 @@
 #include "../../my_libs/mx_printint.c"
-#include "../../my_libs/mx_printchar.c"
 #include <stdio.h>
 
 void mx_print_arr_int(const int *arr, int size)
@@ -7,14 +6,13 @@ void mx_print_arr_int(const int *arr, int size)
     for (int i = 0; i < size; i++)
     {
         mx_printint(arr[i]);
-        //char c = 32;
-        //mx_printchar(c);
+        mx_printchar('\n');
     }
 }
 
 int main()
 {
-    const int arr[3] = {3, 45, 678};
-    printf("%d\n", mx_print_arr_int(arr, 3));
+    const int arr[6] = {3, 464, 3, 24, 445, 678};
+    mx_print_arr_int(arr, 6);
     return 0;
 }
