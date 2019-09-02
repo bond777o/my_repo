@@ -1,13 +1,17 @@
 #include <stdio.h>
+#include <unistd.h>
 #include "../../my_libs/mx_strlen.c"
-//typedef int make_iso_compilers_happy;
 
-char *mx_strcat(char *s1, const char *s2)
+char *mx_strcat(char *s1, char *s2)
 {
+    int len_s2 = mx_strlen(s2);
+    printf("len s2 = %d\n", len_s2);
+    int len_s1 = mx_strlen(s1) + len_s2;
+    printf("len s1 = %d\n", len_s1);
+
     int i;
     int j;
-    for (i = 0; s1[i] != '\0'; i++);
-    for (j = 0; s2[j] != '\0'; i++)
+    for (j = 0; i < len_s1; i++)
     {
         s1[i] = s2[j];
     }
@@ -16,9 +20,14 @@ char *mx_strcat(char *s1, const char *s2)
 
 int main()
 {
-    char ss1[] = "qwer";
-    const char ss2[] = "123";
-    mx_strcat(ss1, ss2);
+    char ss1[4] = "qwer";
+    printf("%s\n", ss1);
+
+    char ss2[4] = "qwer";
+    printf("%s\n", ss2);
+    
+    //mx_strcat(ss1, ss2);
+    printf("%s\n", ss1);
     printf("%s\n", ss1);
     return 0;
 }
